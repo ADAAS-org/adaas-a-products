@@ -8,7 +8,7 @@ export declare class A_PRODUCTS_ContextClass extends A_AUTH_ContextClass {
      */
     auth: A_AUTH_ContextClass;
     protected API_LOCATION: string;
-    protected productsContextAllowedProperties: readonly ["CONFIG_SDK_VALIDATION", "CONFIG_VERBOSE", "CONFIG_IGNORE_ERRORS", "SSO_LOCATION", "API_LOCATION"];
+    protected productsContextAllowedProperties: readonly ["CONFIG_SDK_VALIDATION", "CONFIG_VERBOSE", "CONFIG_IGNORE_ERRORS", "SSO_LOCATION", "ENABLE_AUTH", "API_LOCATION"];
     constructor();
     getConfigurationProperty<T = any>(property: typeof this.productsContextAllowedProperties[number]): T;
     getAuthenticator(userASEID?: string | undefined, userScope?: string): A_AUTH_TYPES__IAuthenticator;
