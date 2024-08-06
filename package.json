@@ -1,6 +1,6 @@
 {
   "name": "@adaas/a-products",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The SDK to interact with A-Products API",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
