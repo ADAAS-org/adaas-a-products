@@ -20,6 +20,9 @@ export {
 
 
 // ============ TYPES Export ============
+export * from './src/lib/entities/app/A_PRODUCTS_App.types';
+export * from './src/lib/entities/product/A_PRODUCTS_Product.types';
+export * from './src/lib/entities/product/A_PRODUCTS_ProductBranding.types';
 
 
 // ============ API TYPES Export ============

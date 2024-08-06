@@ -40,6 +40,9 @@ var errors_constants_1 = require("./src/constants/errors.constants");
 Object.defineProperty(exports, "A_PRODUCTS_CONSTANTS__DEFAULT_ERRORS", { enumerable: true, get: function () { return errors_constants_1.A_PRODUCTS_CONSTANTS__DEFAULT_ERRORS; } });
 Object.defineProperty(exports, "A_PRODUCTS_CONSTANTS__ERROR_CODES", { enumerable: true, get: function () { return errors_constants_1.A_PRODUCTS_CONSTANTS__ERROR_CODES; } });
 // ============ TYPES Export ============
+__exportStar(require("./src/lib/entities/app/A_PRODUCTS_App.types"), exports);
+__exportStar(require("./src/lib/entities/product/A_PRODUCTS_Product.types"), exports);
+__exportStar(require("./src/lib/entities/product/A_PRODUCTS_ProductBranding.types"), exports);
 // ============ API TYPES Export ============
 __exportStar(require("./src/api/app-interactions/index.types"), exports);
 __exportStar(require("./src/api/server-commands/index.types"), exports);
