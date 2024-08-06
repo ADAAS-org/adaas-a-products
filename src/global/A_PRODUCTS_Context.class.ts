@@ -1,6 +1,7 @@
-import { A_SDK_CONSTANTS__ERROR_CODES } from "@adaas/a-sdk-types";
+import { A_SDK_CONSTANTS__ERROR_CODES, A_SDK_TYPES__DeepPartial, A_SDK_TYPES__Required } from "@adaas/a-sdk-types";
 import { A_PRODUCTS_CONSTANTS__DEFAULT_ERRORS } from "../constants/errors.constants";
 import { A_AUTH_TYPES__IAuthenticator, A_AUTH_Context, A_AUTH_ContextClass } from "@adaas/a-auth";
+import { A_PRODUCTS_TYPES__ContextConfigurations } from "../types/A_PRODUCTS_Context.types";
 
 /**
  * Global Context for A-Products sdk
@@ -37,6 +38,21 @@ export class A_PRODUCTS_ContextClass extends A_AUTH_ContextClass {
             return this[property as string] as T;
         else
             this.Errors.throw(A_SDK_CONSTANTS__ERROR_CODES.CONFIGURATION_PROPERTY_NOT_EXISTS_OR_NOT_ALLOWED_TO_READ);
+    }
+
+
+    /**
+     *  Configure the A_PRODUCTS_Context with provided configurations
+     * 
+     * @param config 
+     */
+    configure(config: A_SDK_TYPES__Required<A_SDK_TYPES__DeepPartial<A_PRODUCTS_TYPES__ContextConfigurations>, ['variables.ssoLocation']>) {
+
+        this.Logger.log('Configuring A_PRODUCTS_Context with provided configurations', config);
+
+        this.API_LOCATION = config.variables?.apiLocation || this.API_LOCATION;
+
+        super.configure(config as any);
     }
 
 

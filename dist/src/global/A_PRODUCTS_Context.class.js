@@ -38,6 +38,17 @@ class A_PRODUCTS_ContextClass extends a_auth_1.A_AUTH_ContextClass {
         else
             this.Errors.throw(a_sdk_types_1.A_SDK_CONSTANTS__ERROR_CODES.CONFIGURATION_PROPERTY_NOT_EXISTS_OR_NOT_ALLOWED_TO_READ);
     }
+    /**
+     *  Configure the A_PRODUCTS_Context with provided configurations
+     *
+     * @param config
+     */
+    configure(config) {
+        var _a;
+        this.Logger.log('Configuring A_PRODUCTS_Context with provided configurations', config);
+        this.API_LOCATION = ((_a = config.variables) === null || _a === void 0 ? void 0 : _a.apiLocation) || this.API_LOCATION;
+        super.configure(config);
+    }
     getAuthenticator(userASEID, userScope) {
         /**
          * In case when the CLIENT_ID and CLIENT_SECRET provided
