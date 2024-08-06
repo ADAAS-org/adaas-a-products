@@ -1,0 +1,8 @@
+export declare enum A_PRODUCTS_TYPES__AppStatus {
+    ACTIVE = "ACTIVE",
+    INACTIVE = "INACTIVE",
+    DELETED = "DELETED",
+    MAINTENANCE = "MAINTENANCE",
+    SUSPENDED = "SUSPENDED",
+    TESTING = "TESTING"
+}
