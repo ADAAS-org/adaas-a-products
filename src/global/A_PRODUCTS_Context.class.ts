@@ -46,11 +46,11 @@ export class A_PRODUCTS_ContextClass extends A_AUTH_ContextClass {
      * 
      * @param config 
      */
-    configure(config: A_SDK_TYPES__Required<A_SDK_TYPES__DeepPartial<A_PRODUCTS_TYPES__ContextConfigurations>, ['variables.ssoLocation']>) {
+    configure(config: A_SDK_TYPES__DeepPartial<A_PRODUCTS_TYPES__ContextConfigurations>) {
 
         this.Logger.log('Configuring A_PRODUCTS_Context with provided configurations', config);
 
-        this.API_LOCATION = config.variables?.apiLocation || this.API_LOCATION;
+        this.API_LOCATION = config.products?.apiLocation || this.API_LOCATION;
 
         super.configure(config);
 

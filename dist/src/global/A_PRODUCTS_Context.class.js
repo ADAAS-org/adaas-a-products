@@ -46,7 +46,7 @@ class A_PRODUCTS_ContextClass extends a_auth_1.A_AUTH_ContextClass {
     configure(config) {
         var _a;
         this.Logger.log('Configuring A_PRODUCTS_Context with provided configurations', config);
-        this.API_LOCATION = ((_a = config.variables) === null || _a === void 0 ? void 0 : _a.apiLocation) || this.API_LOCATION;
+        this.API_LOCATION = ((_a = config.products) === null || _a === void 0 ? void 0 : _a.apiLocation) || this.API_LOCATION;
         super.configure(config);
         this.auth.configure(config);
     }
