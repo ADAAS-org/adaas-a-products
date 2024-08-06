@@ -17,7 +17,7 @@ class A_PRODUCTS_APP_INTERACTIONS__AppSettingsAPI extends a_auth_1.A_AUTH_AppInt
     }
     /**
      *
-     * This function is used to get organization settings
+     * This function is used to get app settings
      *
      * @param orgASEID
      * @returns
@@ -29,13 +29,13 @@ class A_PRODUCTS_APP_INTERACTIONS__AppSettingsAPI extends a_auth_1.A_AUTH_AppInt
     meta) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this
-                .get(`/organizations/${request.orgASEID}/settings`, {}, {
+                .get(`/apps/${request.orgASEID}/settings`, {}, {
                 meta
             });
         });
     }
     /**
-     *  This function is used to update organization settings
+     *  This function is used to update app settings
      *
      * @param request
      * @param meta
@@ -48,7 +48,7 @@ class A_PRODUCTS_APP_INTERACTIONS__AppSettingsAPI extends a_auth_1.A_AUTH_AppInt
     meta) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this
-                .put(`/organizations/${request.orgASEID}/settings`, request.settings, {
+                .put(`/apps/${request.orgASEID}/settings`, request.settings, {
                 meta
             });
         });

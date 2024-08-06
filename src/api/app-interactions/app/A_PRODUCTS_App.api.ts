@@ -23,7 +23,7 @@ export class A_PRODUCTS_APP_INTERACTIONS__AppAPI extends A_AUTH_AppInteractions_
 
 
     /**
-     * Returns list of organizations based on User Access
+     * Returns list of apps based on User Access
      * 
      * @param request 
      * @param meta 
@@ -38,7 +38,7 @@ export class A_PRODUCTS_APP_INTERACTIONS__AppAPI extends A_AUTH_AppInteractions_
     ) {
         return await this
             .get<A_PRODUCTS_APP_INTERACTIONS_TYPES__AppListResponse, M>(
-                '/organizations',
+                '/apps',
                 request,
                 {
                     meta
@@ -47,7 +47,7 @@ export class A_PRODUCTS_APP_INTERACTIONS__AppAPI extends A_AUTH_AppInteractions_
     }
 
     /**
-     * API returns organization with nested entities such as profile, settings, etc.
+     * API returns app with nested entities such as profile, settings, etc.
      * 
      * @param request 
      * @param meta 
@@ -62,7 +62,7 @@ export class A_PRODUCTS_APP_INTERACTIONS__AppAPI extends A_AUTH_AppInteractions_
     ) {
         return await this
             .get<A_PRODUCTS_APP_INTERACTIONS_TYPES__AppGetResponse, M>(
-                `/organizations/${request.orgASEID}`,
+                `/apps/${request.orgASEID}`,
                 {},
                 {
                     meta
@@ -72,7 +72,7 @@ export class A_PRODUCTS_APP_INTERACTIONS__AppAPI extends A_AUTH_AppInteractions_
 
 
     /**
-     *  API creates organization with required dependencies
+     *  API creates app with required dependencies
      * 
      * @param request 
      * @param meta 
@@ -87,7 +87,7 @@ export class A_PRODUCTS_APP_INTERACTIONS__AppAPI extends A_AUTH_AppInteractions_
     ) {
         return await this
             .post<A_PRODUCTS_APP_INTERACTIONS_TYPES__AppCreateResponse, M>(
-                `/organizations`,
+                `/apps`,
                 request,
                 {
                     meta
@@ -97,9 +97,9 @@ export class A_PRODUCTS_APP_INTERACTIONS__AppAPI extends A_AUTH_AppInteractions_
 
 
     /**
-    * This function is used to create organization
+    * This function is used to create app
     * 
-    * @param organization 
+    * @param app 
     * @returns 
     */
     async update<M = any>(
@@ -111,7 +111,7 @@ export class A_PRODUCTS_APP_INTERACTIONS__AppAPI extends A_AUTH_AppInteractions_
     ) {
         return await this
             .post<A_PRODUCTS_APP_INTERACTIONS_TYPES__AppUpdateResponse, M>(
-                `/organizations/${request.aseid}`,
+                `/apps/${request.aseid}`,
                 request,
                 {
                     meta

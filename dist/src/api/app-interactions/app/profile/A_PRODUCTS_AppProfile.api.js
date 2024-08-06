@@ -17,7 +17,7 @@ class A_PRODUCTS_APP_INTERACTIONS__AppProfileAPI extends a_auth_1.A_AUTH_AppInte
     }
     /**
      *
-     * This function is used to get organization profile
+     * This function is used to get app profile
      *
      * @param orgASEID
      * @returns
@@ -29,13 +29,13 @@ class A_PRODUCTS_APP_INTERACTIONS__AppProfileAPI extends a_auth_1.A_AUTH_AppInte
     meta) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this
-                .get(`/organizations/${request.orgASEID}/profile`, {}, {
+                .get(`/apps/${request.orgASEID}/profile`, {}, {
                 meta
             });
         });
     }
     /**
-     *  This function is used to upload organization logo
+     *  This function is used to upload app logo
      *
      * @param request
      * @param meta
@@ -48,9 +48,9 @@ class A_PRODUCTS_APP_INTERACTIONS__AppProfileAPI extends a_auth_1.A_AUTH_AppInte
     meta) {
         return __awaiter(this, void 0, void 0, function* () {
             const formData = new FormData();
-            formData.append('organizationLogo', request.file);
+            formData.append('appLogo', request.file);
             return yield this
-                .post(`/organizations/${request.orgASEID}/profile/logo`, formData, {
+                .post(`/apps/${request.orgASEID}/profile/logo`, formData, {
                 meta,
                 headers: {
                     'Content-Type': 'multipart/form-data'
@@ -59,7 +59,7 @@ class A_PRODUCTS_APP_INTERACTIONS__AppProfileAPI extends a_auth_1.A_AUTH_AppInte
         });
     }
     /**
-     *  This function is used to update organization profile
+     *  This function is used to update app profile
      *
      * @param request
      * @param meta
@@ -72,7 +72,7 @@ class A_PRODUCTS_APP_INTERACTIONS__AppProfileAPI extends a_auth_1.A_AUTH_AppInte
     meta) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this
-                .put(`/organizations/${request.orgASEID}/profile`, request.profile, {
+                .put(`/apps/${request.orgASEID}/profile`, request.profile, {
                 meta
             });
         });

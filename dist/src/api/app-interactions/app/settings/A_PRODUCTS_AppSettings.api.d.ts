@@ -5,7 +5,7 @@ export declare class A_PRODUCTS_APP_INTERACTIONS__AppSettingsAPI extends A_AUTH_
     protected get baseURL(): string;
     /**
      *
-     * This function is used to get organization settings
+     * This function is used to get app settings
      *
      * @param orgASEID
      * @returns
@@ -16,7 +16,7 @@ export declare class A_PRODUCTS_APP_INTERACTIONS__AppSettingsAPI extends A_AUTH_
      */
     meta?: M): Promise<Partial<import("./A_PRODUCTS_AppSettings.types").A_PRODUCTS_TYPES__AppSettings_APIEntity>>;
     /**
-     *  This function is used to update organization settings
+     *  This function is used to update app settings
      *
      * @param request
      * @param meta

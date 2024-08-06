@@ -7,7 +7,7 @@ import { A_PRODUCTS_APP_INTERACTIONS_TYPES__AppCreateRequest, A_PRODUCTS_APP_INT
 export declare class A_PRODUCTS_APP_INTERACTIONS__AppAPI extends A_AUTH_AppInteractions_APIProvider<A_PRODUCTS_ContextClass> {
     protected get baseURL(): string;
     /**
-     * Returns list of organizations based on User Access
+     * Returns list of apps based on User Access
      *
      * @param request
      * @param meta
@@ -19,7 +19,7 @@ export declare class A_PRODUCTS_APP_INTERACTIONS__AppAPI extends A_AUTH_AppInter
      */
     meta?: M): Promise<A_PRODUCTS_APP_INTERACTIONS_TYPES__AppListResponse>;
     /**
-     * API returns organization with nested entities such as profile, settings, etc.
+     * API returns app with nested entities such as profile, settings, etc.
      *
      * @param request
      * @param meta
@@ -31,7 +31,7 @@ export declare class A_PRODUCTS_APP_INTERACTIONS__AppAPI extends A_AUTH_AppInter
      */
     meta?: M): Promise<A_PRODUCTS_APP_INTERACTIONS_TYPES__AppGetResponse>;
     /**
-     *  API creates organization with required dependencies
+     *  API creates app with required dependencies
      *
      * @param request
      * @param meta
@@ -43,9 +43,9 @@ export declare class A_PRODUCTS_APP_INTERACTIONS__AppAPI extends A_AUTH_AppInter
      */
     meta?: M): Promise<A_PRODUCTS_APP_INTERACTIONS_TYPES__AppCreateResponse>;
     /**
-    * This function is used to create organization
+    * This function is used to create app
     *
-    * @param organization
+    * @param app
     * @returns
     */
     update<M = any>(request: A_PRODUCTS_APP_INTERACTIONS_TYPES__AppUpdateRequest, 

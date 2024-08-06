@@ -5,7 +5,7 @@ export declare class A_PRODUCTS_APP_INTERACTIONS__AppProfileAPI extends A_AUTH_A
     protected get baseURL(): string;
     /**
      *
-     * This function is used to get organization profile
+     * This function is used to get app profile
      *
      * @param orgASEID
      * @returns
@@ -16,7 +16,7 @@ export declare class A_PRODUCTS_APP_INTERACTIONS__AppProfileAPI extends A_AUTH_A
      */
     meta?: M): Promise<Partial<import("./A_PRODUCTS_AppProfile.types").A_PRODUCTS_TYPES__AppProfile_APIEntity>>;
     /**
-     *  This function is used to upload organization logo
+     *  This function is used to upload app logo
      *
      * @param request
      * @param meta
@@ -28,7 +28,7 @@ export declare class A_PRODUCTS_APP_INTERACTIONS__AppProfileAPI extends A_AUTH_A
      */
     meta?: M): Promise<A_PRODUCTS_APP_INTERACTIONS_TYPES__AppProfileLogoUploadResponse>;
     /**
-     *  This function is used to update organization profile
+     *  This function is used to update app profile
      *
      * @param request
      * @param meta

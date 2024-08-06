@@ -16,7 +16,7 @@ export class A_PRODUCTS_APP_INTERACTIONS__AppSettingsAPI extends A_AUTH_AppInter
 
     /**
      * 
-     * This function is used to get organization settings
+     * This function is used to get app settings
      * 
      * @param orgASEID 
      * @returns 
@@ -30,7 +30,7 @@ export class A_PRODUCTS_APP_INTERACTIONS__AppSettingsAPI extends A_AUTH_AppInter
     ) {
         return await this
             .get<A_PRODUCTS_APP_INTERACTIONS_TYPES__AppSettingsGetResponse, M>(
-                `/organizations/${request.orgASEID}/settings`,
+                `/apps/${request.orgASEID}/settings`,
                 {},
                 {
                     meta
@@ -40,7 +40,7 @@ export class A_PRODUCTS_APP_INTERACTIONS__AppSettingsAPI extends A_AUTH_AppInter
 
 
     /**
-     *  This function is used to update organization settings
+     *  This function is used to update app settings
      * 
      * @param request 
      * @param meta 
@@ -55,7 +55,7 @@ export class A_PRODUCTS_APP_INTERACTIONS__AppSettingsAPI extends A_AUTH_AppInter
     ) {
         return await this
             .put<A_PRODUCTS_APP_INTERACTIONS_TYPES__AppSettingsUpdateResponse, M>(
-                `/organizations/${request.orgASEID}/settings`,
+                `/apps/${request.orgASEID}/settings`,
                 request.settings,
                 {
                     meta

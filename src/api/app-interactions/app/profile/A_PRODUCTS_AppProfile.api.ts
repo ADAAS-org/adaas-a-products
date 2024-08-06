@@ -17,7 +17,7 @@ export class A_PRODUCTS_APP_INTERACTIONS__AppProfileAPI extends A_AUTH_AppIntera
 
     /**
      * 
-     * This function is used to get organization profile
+     * This function is used to get app profile
      * 
      * @param orgASEID 
      * @returns 
@@ -31,7 +31,7 @@ export class A_PRODUCTS_APP_INTERACTIONS__AppProfileAPI extends A_AUTH_AppIntera
     ) {
         return await this
             .get<A_PRODUCTS_APP_INTERACTIONS_TYPES__AppProfileGetResponse, M>(
-                `/organizations/${request.orgASEID}/profile`,
+                `/apps/${request.orgASEID}/profile`,
                 {},
                 {
                     meta
@@ -40,7 +40,7 @@ export class A_PRODUCTS_APP_INTERACTIONS__AppProfileAPI extends A_AUTH_AppIntera
     }
 
     /**
-     *  This function is used to upload organization logo
+     *  This function is used to upload app logo
      * 
      * @param request 
      * @param meta 
@@ -54,11 +54,11 @@ export class A_PRODUCTS_APP_INTERACTIONS__AppProfileAPI extends A_AUTH_AppIntera
         meta?: M
     ) {
         const formData = new FormData();
-        formData.append('organizationLogo', request.file);
+        formData.append('appLogo', request.file);
 
         return await this
             .post<A_PRODUCTS_APP_INTERACTIONS_TYPES__AppProfileLogoUploadResponse, M>(
-                `/organizations/${request.orgASEID}/profile/logo`,
+                `/apps/${request.orgASEID}/profile/logo`,
                 formData,
                 {
                     meta,
@@ -71,7 +71,7 @@ export class A_PRODUCTS_APP_INTERACTIONS__AppProfileAPI extends A_AUTH_AppIntera
 
 
     /**
-     *  This function is used to update organization profile
+     *  This function is used to update app profile
      * 
      * @param request 
      * @param meta 
@@ -86,7 +86,7 @@ export class A_PRODUCTS_APP_INTERACTIONS__AppProfileAPI extends A_AUTH_AppIntera
     ) {
         return await this
             .put<A_PRODUCTS_APP_INTERACTIONS_TYPES__AppProfileUpdateResponse, M>(
-                `/organizations/${request.orgASEID}/profile`,
+                `/apps/${request.orgASEID}/profile`,
                 request.profile,
                 {
                     meta

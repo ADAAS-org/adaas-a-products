@@ -19,7 +19,7 @@ class A_PRODUCTS_APP_INTERACTIONS__AppAPI extends a_auth_1.A_AUTH_AppInteraction
         return this.context.getConfigurationProperty('API_LOCATION');
     }
     /**
-     * Returns list of organizations based on User Access
+     * Returns list of apps based on User Access
      *
      * @param request
      * @param meta
@@ -32,13 +32,13 @@ class A_PRODUCTS_APP_INTERACTIONS__AppAPI extends a_auth_1.A_AUTH_AppInteraction
     meta) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this
-                .get('/organizations', request, {
+                .get('/apps', request, {
                 meta
             });
         });
     }
     /**
-     * API returns organization with nested entities such as profile, settings, etc.
+     * API returns app with nested entities such as profile, settings, etc.
      *
      * @param request
      * @param meta
@@ -51,13 +51,13 @@ class A_PRODUCTS_APP_INTERACTIONS__AppAPI extends a_auth_1.A_AUTH_AppInteraction
     meta) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this
-                .get(`/organizations/${request.orgASEID}`, {}, {
+                .get(`/apps/${request.orgASEID}`, {}, {
                 meta
             });
         });
     }
     /**
-     *  API creates organization with required dependencies
+     *  API creates app with required dependencies
      *
      * @param request
      * @param meta
@@ -70,15 +70,15 @@ class A_PRODUCTS_APP_INTERACTIONS__AppAPI extends a_auth_1.A_AUTH_AppInteraction
     meta) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this
-                .post(`/organizations`, request, {
+                .post(`/apps`, request, {
                 meta
             });
         });
     }
     /**
-    * This function is used to create organization
+    * This function is used to create app
     *
-    * @param organization
+    * @param app
     * @returns
     */
     update(request, 
@@ -88,7 +88,7 @@ class A_PRODUCTS_APP_INTERACTIONS__AppAPI extends a_auth_1.A_AUTH_AppInteraction
     meta) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this
-                .post(`/organizations/${request.aseid}`, request, {
+                .post(`/apps/${request.aseid}`, request, {
                 meta
             });
         });

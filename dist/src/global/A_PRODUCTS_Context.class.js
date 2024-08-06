@@ -48,6 +48,7 @@ class A_PRODUCTS_ContextClass extends a_auth_1.A_AUTH_ContextClass {
         this.Logger.log('Configuring A_PRODUCTS_Context with provided configurations', config);
         this.API_LOCATION = ((_a = config.variables) === null || _a === void 0 ? void 0 : _a.apiLocation) || this.API_LOCATION;
         super.configure(config);
+        this.auth.configure(config);
     }
     getAuthenticator(userASEID, userScope) {
         /**

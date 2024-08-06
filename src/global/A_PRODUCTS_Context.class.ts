@@ -52,7 +52,9 @@ export class A_PRODUCTS_ContextClass extends A_AUTH_ContextClass {
 
         this.API_LOCATION = config.variables?.apiLocation || this.API_LOCATION;
 
-        super.configure(config as any);
+        super.configure(config);
+
+        this.auth.configure(config);
     }
 
 
