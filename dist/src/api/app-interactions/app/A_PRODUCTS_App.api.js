@@ -51,7 +51,7 @@ class A_PRODUCTS_APP_INTERACTIONS__AppAPI extends a_auth_1.A_AUTH_AppInteraction
     meta) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this
-                .get(`/apps/${request.orgASEID}`, {}, {
+                .get(`/apps/${request.asied}`, {}, {
                 meta
             });
         });

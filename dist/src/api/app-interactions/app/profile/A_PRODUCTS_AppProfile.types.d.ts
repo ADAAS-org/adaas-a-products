@@ -15,14 +15,14 @@ export type A_PRODUCTS_APP_INTERACTIONS_TYPES__AppProfileGetRequest = {
     /**
      * App identifier in ADAAS System
      */
-    orgASEID: string;
+    asied: string;
 };
 export type A_PRODUCTS_APP_INTERACTIONS_TYPES__AppProfileGetResponse = Partial<A_PRODUCTS_TYPES__AppProfile_APIEntity>;
 export type A_PRODUCTS_APP_INTERACTIONS_TYPES__AppProfileUpdateRequest = {
     /**
      * App identifier in ADAAS System
      */
-    orgASEID: string;
+    asied: string;
     profile: A_SDK_TYPES__DeepPartial<A_PRODUCTS_TYPES__AppProfile_APIEntity>;
 };
 export type A_PRODUCTS_APP_INTERACTIONS_TYPES__AppProfileUpdateResponse = Partial<A_PRODUCTS_TYPES__AppProfile_APIEntity>;
@@ -30,7 +30,7 @@ export type A_PRODUCTS_APP_INTERACTIONS_TYPES__AppProfileLogoUploadRequest = {
     /**
      * App identifier in ADAAS System
      */
-    orgASEID: string;
+    asied: string;
     file: File;
 };
 export type A_PRODUCTS_APP_INTERACTIONS_TYPES__AppProfileLogoUploadResponse = {

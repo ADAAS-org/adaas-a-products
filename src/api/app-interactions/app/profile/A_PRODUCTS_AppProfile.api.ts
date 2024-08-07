@@ -31,7 +31,7 @@ export class A_PRODUCTS_APP_INTERACTIONS__AppProfileAPI extends A_AUTH_AppIntera
     ) {
         return await this
             .get<A_PRODUCTS_APP_INTERACTIONS_TYPES__AppProfileGetResponse, M>(
-                `/apps/${request.orgASEID}/profile`,
+                `/apps/${request.asied}/profile`,
                 {},
                 {
                     meta
@@ -58,7 +58,7 @@ export class A_PRODUCTS_APP_INTERACTIONS__AppProfileAPI extends A_AUTH_AppIntera
 
         return await this
             .post<A_PRODUCTS_APP_INTERACTIONS_TYPES__AppProfileLogoUploadResponse, M>(
-                `/apps/${request.orgASEID}/profile/logo`,
+                `/apps/${request.asied}/profile/logo`,
                 formData,
                 {
                     meta,
@@ -86,7 +86,7 @@ export class A_PRODUCTS_APP_INTERACTIONS__AppProfileAPI extends A_AUTH_AppIntera
     ) {
         return await this
             .put<A_PRODUCTS_APP_INTERACTIONS_TYPES__AppProfileUpdateResponse, M>(
-                `/apps/${request.orgASEID}/profile`,
+                `/apps/${request.asied}/profile`,
                 request.profile,
                 {
                     meta
