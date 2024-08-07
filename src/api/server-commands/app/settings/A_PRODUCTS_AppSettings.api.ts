@@ -18,7 +18,7 @@ export class A_PRODUCTS_SERVER_COMMANDS__AppSettingsAPI extends A_AUTH_AppIntera
      * 
      * This function is used to get app settings
      * 
-     * @param orgASEID 
+     * @param aseid 
      * @returns 
      */
     async load<M = any>(
@@ -27,7 +27,7 @@ export class A_PRODUCTS_SERVER_COMMANDS__AppSettingsAPI extends A_AUTH_AppIntera
     ) {
         return await this
             .get<A_PRODUCTS_SERVER_COMMANDS_TYPES__AppSettingsGetResponse, M>(
-                `/apps/${request.orgASEID}/settings`,
+                `/apps/${request.aseid}/settings`,
                 {},
                 config
             );
@@ -47,7 +47,7 @@ export class A_PRODUCTS_SERVER_COMMANDS__AppSettingsAPI extends A_AUTH_AppIntera
     ) {
         return await this
             .put<A_PRODUCTS_SERVER_COMMANDS_TYPES__AppSettingsUpdateResponse, M>(
-                `/apps/${request.orgASEID}/settings`,
+                `/apps/${request.aseid}/settings`,
                 request.settings,
                 config
             );

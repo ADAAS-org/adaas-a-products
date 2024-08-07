@@ -10,7 +10,7 @@ export type A_PRODUCTS_SERVER_COMMANDS_TYPES__AppGetRequest = {
     /**
      * App identifier in ADAAS System
      */
-    orgASEID: string;
+    aseid: string;
 };
 export type A_PRODUCTS_SERVER_COMMANDS_TYPES__AppGetResponse = A_SDK_TYPES__Required<A_SDK_TYPES__DeepPartial<A_PRODUCTS_TYPES__App_APIEntity>, [
     'aseid',

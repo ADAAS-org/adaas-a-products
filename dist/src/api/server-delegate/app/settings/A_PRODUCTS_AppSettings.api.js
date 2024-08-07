@@ -19,13 +19,13 @@ class A_PRODUCTS_SERVER_DELEGATE__AppSettingsAPI extends a_auth_1.A_AUTH_ServerD
      *
      * This function is used to get app settings
      *
-     * @param orgASEID
+     * @param aseid
      * @returns
      */
     load(request, config) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this
-                .get(`/apps/${request.orgASEID}/settings`, {}, config);
+                .get(`/apps/${request.aseid}/settings`, {}, config);
         });
     }
     /**
@@ -38,7 +38,7 @@ class A_PRODUCTS_SERVER_DELEGATE__AppSettingsAPI extends a_auth_1.A_AUTH_ServerD
     update(request, config) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this
-                .put(`/apps/${request.orgASEID}/settings`, request.settings, config);
+                .put(`/apps/${request.aseid}/settings`, request.settings, config);
         });
     }
 }

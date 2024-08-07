@@ -65,7 +65,7 @@ export class A_PRODUCTS_APP_INTERACTIONS__AppAPI extends A_AUTH_AppInteractions_
     ) {
         return await this
             .get<A_PRODUCTS_APP_INTERACTIONS_TYPES__AppGetResponse, M>(
-                `/apps/${request.asied}`,
+                `/apps/${request.aseid}`,
                 {},
                 {
                     meta

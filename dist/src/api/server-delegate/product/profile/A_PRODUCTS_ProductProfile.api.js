@@ -19,13 +19,13 @@ class A_PRODUCTS_SERVER_DELEGATE__ProductProfileAPI extends a_auth_1.A_AUTH_Serv
      *
      * This function is used to get product profile
      *
-     * @param orgASEID
+     * @param aseid
      * @returns
      */
     load(request, config) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this
-                .get(`/products/${request.orgASEID}/profile`, {}, config);
+                .get(`/products/${request.aseid}/profile`, {}, config);
         });
     }
     /**
@@ -40,7 +40,7 @@ class A_PRODUCTS_SERVER_DELEGATE__ProductProfileAPI extends a_auth_1.A_AUTH_Serv
             const formData = new FormData();
             formData.append('productLogo', request.file);
             return yield this
-                .post(`/products/${request.orgASEID}/profile/logo`, formData, Object.assign(Object.assign({}, config), { headers: {
+                .post(`/products/${request.aseid}/profile/logo`, formData, Object.assign(Object.assign({}, config), { headers: {
                     'Content-Type': 'multipart/form-data'
                 } }));
         });
@@ -55,7 +55,7 @@ class A_PRODUCTS_SERVER_DELEGATE__ProductProfileAPI extends a_auth_1.A_AUTH_Serv
     update(request, config) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this
-                .put(`/products/${request.orgASEID}/profile`, request.profile, config);
+                .put(`/products/${request.aseid}/profile`, request.profile, config);
         });
     }
 }

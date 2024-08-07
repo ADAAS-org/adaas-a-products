@@ -7,7 +7,7 @@ export declare class A_PRODUCTS_SERVER_COMMANDS__ProductSettingsAPI extends A_AU
      *
      * This function is used to get product settings
      *
-     * @param orgASEID
+     * @param aseid
      * @returns
      */
     load<M = any>(request: A_PRODUCTS_SERVER_COMMANDS_TYPES__ProductSettingsGetRequest, config?: A_AUTH_TYPES__APIProviderRequestConfig<M>): Promise<Partial<import("../../../app-interactions/index.types").A_PRODUCTS_TYPES__ProductSettings_APIEntity>>;

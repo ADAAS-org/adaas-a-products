@@ -4,14 +4,14 @@ export type A_PRODUCTS_SERVER_COMMANDS_TYPES__ProductSettingsGetRequest = {
     /**
      * Product identifier in ADAAS System
      */
-    orgASEID: string;
+    aseid: string;
 };
 export type A_PRODUCTS_SERVER_COMMANDS_TYPES__ProductSettingsGetResponse = Partial<A_PRODUCTS_TYPES__ProductSettings_APIEntity>;
 export type A_PRODUCTS_SERVER_COMMANDS_TYPES__ProductSettingsUpdateRequest = {
     /**
      * Product identifier in ADAAS System
      */
-    orgASEID: string;
+    aseid: string;
     settings: A_SDK_TYPES__DeepPartial<A_PRODUCTS_TYPES__ProductSettings_APIEntity>;
 };
 export type A_PRODUCTS_SERVER_COMMANDS_TYPES__ProductSettingsUpdateResponse = Partial<A_PRODUCTS_TYPES__ProductSettings_APIEntity>;

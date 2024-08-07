@@ -19,7 +19,7 @@ export class A_PRODUCTS_SERVER_COMMANDS__AppProfileAPI extends A_AUTH_ServerComm
      * 
      * This function is used to get app profile
      * 
-     * @param orgASEID 
+     * @param aseid 
      * @returns 
      */
     async load<M = any>(
@@ -28,7 +28,7 @@ export class A_PRODUCTS_SERVER_COMMANDS__AppProfileAPI extends A_AUTH_ServerComm
     ) {
         return await this
             .get<A_PRODUCTS_SERVER_COMMANDS_TYPES__AppProfileGetResponse, M>(
-                `/apps/${request.orgASEID}/profile`,
+                `/apps/${request.aseid}/profile`,
                 {},
                 config
             );
@@ -50,7 +50,7 @@ export class A_PRODUCTS_SERVER_COMMANDS__AppProfileAPI extends A_AUTH_ServerComm
 
         return await this
             .post<A_PRODUCTS_SERVER_COMMANDS_TYPES__AppProfileLogoUploadResponse, M>(
-                `/apps/${request.orgASEID}/profile/logo`,
+                `/apps/${request.aseid}/profile/logo`,
                 formData,
                 {
                     ...config,
@@ -75,7 +75,7 @@ export class A_PRODUCTS_SERVER_COMMANDS__AppProfileAPI extends A_AUTH_ServerComm
     ) {
         return await this
             .put<A_PRODUCTS_SERVER_COMMANDS_TYPES__AppProfileUpdateResponse, M>(
-                `/apps/${request.orgASEID}/profile`,
+                `/apps/${request.aseid}/profile`,
                 request.profile,
                 config
             );

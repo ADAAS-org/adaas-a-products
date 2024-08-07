@@ -57,7 +57,7 @@ export class A_PRODUCTS_SERVER_COMMANDS__AppAPI extends A_AUTH_AppInteractions_A
     ) {
         return await this
             .get<A_PRODUCTS_SERVER_COMMANDS_TYPES__AppGetResponse, M>(
-                `/apps/${request.orgASEID}`,
+                `/apps/${request.aseid}`,
                 {},
                 config
             );

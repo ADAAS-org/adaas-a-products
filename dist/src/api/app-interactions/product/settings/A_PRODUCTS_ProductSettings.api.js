@@ -29,7 +29,7 @@ class A_PRODUCTS_APP_INTERACTIONS__ProductSettingsAPI extends a_auth_1.A_AUTH_Ap
     meta) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this
-                .get(`/products/${request.orgASEID}/settings`, {}, {
+                .get(`/products/${request.aseid}/settings`, {}, {
                 meta
             });
         });
@@ -48,7 +48,7 @@ class A_PRODUCTS_APP_INTERACTIONS__ProductSettingsAPI extends a_auth_1.A_AUTH_Ap
     meta) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this
-                .put(`/products/${request.orgASEID}/settings`, request.settings, {
+                .put(`/products/${request.aseid}/settings`, request.settings, {
                 meta
             });
         });

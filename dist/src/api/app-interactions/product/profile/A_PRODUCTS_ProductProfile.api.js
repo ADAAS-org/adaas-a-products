@@ -29,7 +29,7 @@ class A_PRODUCTS_APP_INTERACTIONS__ProductProfileAPI extends a_auth_1.A_AUTH_App
     meta) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this
-                .get(`/products/${request.orgASEID}/profile`, {}, {
+                .get(`/products/${request.aseid}/profile`, {}, {
                 meta
             });
         });
@@ -50,7 +50,7 @@ class A_PRODUCTS_APP_INTERACTIONS__ProductProfileAPI extends a_auth_1.A_AUTH_App
             const formData = new FormData();
             formData.append('productLogo', request.file);
             return yield this
-                .post(`/products/${request.orgASEID}/profile/logo`, formData, {
+                .post(`/products/${request.aseid}/profile/logo`, formData, {
                 meta,
                 headers: {
                     'Content-Type': 'multipart/form-data'
@@ -72,7 +72,7 @@ class A_PRODUCTS_APP_INTERACTIONS__ProductProfileAPI extends a_auth_1.A_AUTH_App
     meta) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this
-                .put(`/products/${request.orgASEID}/profile`, request.profile, {
+                .put(`/products/${request.aseid}/profile`, request.profile, {
                 meta
             });
         });

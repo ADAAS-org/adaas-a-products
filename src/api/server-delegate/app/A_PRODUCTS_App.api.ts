@@ -58,7 +58,7 @@ export class A_PRODUCTS_SERVER_DELEGATE__AppAPI extends A_AUTH_ServerDelegate_AP
     ) {
         return await this
             .get<A_PRODUCTS_SERVER_DELEGATE_TYPES__AppGetResponse, M>(
-                `/apps/${request.orgASEID}`,
+                `/apps/${request.aseid}`,
                 {},
                 config
             );

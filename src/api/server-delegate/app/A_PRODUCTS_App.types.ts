@@ -27,7 +27,7 @@ export type A_PRODUCTS_SERVER_DELEGATE_TYPES__AppGetRequest = {
     /**
      * App identifier in ADAAS System
      */
-    orgASEID: string,
+    aseid: string,
 }
 
 export type A_PRODUCTS_SERVER_DELEGATE_TYPES__AppGetResponse = A_SDK_TYPES__Required<

@@ -9,7 +9,7 @@ export type A_PRODUCTS_SERVER_COMMANDS_TYPES__AppProfileGetRequest = {
     /**
      * App identifier in ADAAS System
      */
-    orgASEID: string,
+    aseid: string,
 }
 
 export type A_PRODUCTS_SERVER_COMMANDS_TYPES__AppProfileGetResponse = Partial<A_PRODUCTS_TYPES__AppProfile_APIEntity>
@@ -21,7 +21,7 @@ export type A_PRODUCTS_SERVER_COMMANDS_TYPES__AppProfileUpdateRequest = {
     /**
      * App identifier in ADAAS System
      */
-    orgASEID: string,
+    aseid: string,
     profile: A_SDK_TYPES__DeepPartial<A_PRODUCTS_TYPES__AppProfile_APIEntity>
 }
 
@@ -35,7 +35,7 @@ export type A_PRODUCTS_SERVER_COMMANDS_TYPES__AppProfileLogoUploadRequest = {
     /**
      * App identifier in ADAAS System
      */
-    orgASEID: string,
+    aseid: string,
     file: File
 }
 

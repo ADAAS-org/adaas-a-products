@@ -27,7 +27,7 @@ class A_PRODUCTS_APP_INTERACTIONS__ProductBrandingAPI extends a_auth_1.A_AUTH_Ap
     meta) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this
-                .get(`/products/${request.productASEID}/branding`, {}, {
+                .get(`/products/${request.aseid}/branding`, {}, {
                 meta
             });
         });
@@ -46,7 +46,7 @@ class A_PRODUCTS_APP_INTERACTIONS__ProductBrandingAPI extends a_auth_1.A_AUTH_Ap
     meta) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this
-                .put(`/products/${request.orgASEID}/branding`, request.branding, {
+                .put(`/products/${request.aseid}/branding`, request.branding, {
                 meta
             });
         });

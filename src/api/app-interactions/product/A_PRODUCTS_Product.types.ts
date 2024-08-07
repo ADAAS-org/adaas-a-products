@@ -47,7 +47,7 @@ export type A_PRODUCTS_APP_INTERACTIONS_TYPES__ProductGetRequest = {
     /**
      * Product identifier in ADAAS System
      */
-    orgASEID: string,
+    aseid: string,
 }
 
 export type A_PRODUCTS_APP_INTERACTIONS_TYPES__ProductGetResponse = A_SDK_TYPES__Required<

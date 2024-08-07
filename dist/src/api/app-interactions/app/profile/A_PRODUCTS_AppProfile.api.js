@@ -29,7 +29,7 @@ class A_PRODUCTS_APP_INTERACTIONS__AppProfileAPI extends a_auth_1.A_AUTH_AppInte
     meta) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this
-                .get(`/apps/${request.asied}/profile`, {}, {
+                .get(`/apps/${request.aseid}/profile`, {}, {
                 meta
             });
         });
@@ -50,7 +50,7 @@ class A_PRODUCTS_APP_INTERACTIONS__AppProfileAPI extends a_auth_1.A_AUTH_AppInte
             const formData = new FormData();
             formData.append('appLogo', request.file);
             return yield this
-                .post(`/apps/${request.asied}/profile/logo`, formData, {
+                .post(`/apps/${request.aseid}/profile/logo`, formData, {
                 meta,
                 headers: {
                     'Content-Type': 'multipart/form-data'
@@ -72,7 +72,7 @@ class A_PRODUCTS_APP_INTERACTIONS__AppProfileAPI extends a_auth_1.A_AUTH_AppInte
     meta) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this
-                .put(`/apps/${request.asied}/profile`, request.profile, {
+                .put(`/apps/${request.aseid}/profile`, request.profile, {
                 meta
             });
         });

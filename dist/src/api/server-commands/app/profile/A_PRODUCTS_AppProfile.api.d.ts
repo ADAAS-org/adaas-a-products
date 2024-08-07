@@ -7,7 +7,7 @@ export declare class A_PRODUCTS_SERVER_COMMANDS__AppProfileAPI extends A_AUTH_Se
      *
      * This function is used to get app profile
      *
-     * @param orgASEID
+     * @param aseid
      * @returns
      */
     load<M = any>(request: A_PRODUCTS_SERVER_COMMANDS_TYPES__AppProfileGetRequest, config?: A_AUTH_TYPES__APIProviderRequestConfig<M>): Promise<Partial<import("../../../app-interactions/index.types").A_PRODUCTS_TYPES__AppProfile_APIEntity>>;

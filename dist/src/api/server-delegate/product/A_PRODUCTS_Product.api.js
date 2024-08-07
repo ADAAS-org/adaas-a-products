@@ -41,7 +41,7 @@ class A_PRODUCTS_SERVER_DELEGATE__ProductAPI extends a_auth_1.A_AUTH_ServerDeleg
     load(request, config) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this
-                .get(`/products/${request.orgASEID}`, {}, config);
+                .get(`/products/${request.aseid}`, {}, config);
         });
     }
     /**

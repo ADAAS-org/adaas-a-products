@@ -60,7 +60,7 @@ export class A_PRODUCTS_SERVER_DELEGATE__ProductAPI extends A_AUTH_ServerDelegat
     ) {
         return await this
             .get<A_PRODUCTS_SERVER_DELEGATE_TYPES__ProductGetResponse, M>(
-                `/products/${request.orgASEID}`,
+                `/products/${request.aseid}`,
                 {},
                 config
             );

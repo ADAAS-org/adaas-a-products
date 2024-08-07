@@ -31,7 +31,7 @@ export class A_PRODUCTS_APP_INTERACTIONS__ProductProfileAPI extends A_AUTH_AppIn
     ) {
         return await this
             .get<A_PRODUCTS_APP_INTERACTIONS_TYPES__ProductProfileGetResponse, M>(
-                `/products/${request.orgASEID}/profile`,
+                `/products/${request.aseid}/profile`,
                 {},
                 {
                     meta
@@ -58,7 +58,7 @@ export class A_PRODUCTS_APP_INTERACTIONS__ProductProfileAPI extends A_AUTH_AppIn
 
         return await this
             .post<A_PRODUCTS_APP_INTERACTIONS_TYPES__ProductProfileLogoUploadResponse, M>(
-                `/products/${request.orgASEID}/profile/logo`,
+                `/products/${request.aseid}/profile/logo`,
                 formData,
                 {
                     meta,
@@ -86,7 +86,7 @@ export class A_PRODUCTS_APP_INTERACTIONS__ProductProfileAPI extends A_AUTH_AppIn
     ) {
         return await this
             .put<A_PRODUCTS_APP_INTERACTIONS_TYPES__ProductProfileUpdateResponse, M>(
-                `/products/${request.orgASEID}/profile`,
+                `/products/${request.aseid}/profile`,
                 request.profile,
                 {
                     meta

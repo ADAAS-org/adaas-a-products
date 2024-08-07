@@ -20,7 +20,7 @@ export class A_PRODUCTS_SERVER_DELEGATE__AppProfileAPI extends A_AUTH_ServerDele
      * 
      * This function is used to get app profile
      * 
-     * @param orgASEID 
+     * @param aseid 
      * @returns 
      */
     async load<M = any>(
@@ -29,7 +29,7 @@ export class A_PRODUCTS_SERVER_DELEGATE__AppProfileAPI extends A_AUTH_ServerDele
     ) {
         return await this
             .get<A_PRODUCTS_SERVER_DELEGATE_TYPES__AppProfileGetResponse, M>(
-                `/apps/${request.orgASEID}/profile`,
+                `/apps/${request.aseid}/profile`,
                 {},
                 config
             );
@@ -51,7 +51,7 @@ export class A_PRODUCTS_SERVER_DELEGATE__AppProfileAPI extends A_AUTH_ServerDele
 
         return await this
             .post<A_PRODUCTS_SERVER_DELEGATE_TYPES__AppProfileLogoUploadResponse, M>(
-                `/apps/${request.orgASEID}/profile/logo`,
+                `/apps/${request.aseid}/profile/logo`,
                 formData,
                 {
                     ...config,
@@ -76,7 +76,7 @@ export class A_PRODUCTS_SERVER_DELEGATE__AppProfileAPI extends A_AUTH_ServerDele
     ) {
         return await this
             .put<A_PRODUCTS_SERVER_DELEGATE_TYPES__AppProfileUpdateResponse, M>(
-                `/apps/${request.orgASEID}/profile`,
+                `/apps/${request.aseid}/profile`,
                 request.profile,
                 config
             );

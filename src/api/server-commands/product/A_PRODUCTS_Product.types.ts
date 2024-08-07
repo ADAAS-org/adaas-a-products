@@ -31,7 +31,7 @@ export type A_PRODUCTS_SERVER_COMMANDS_TYPES__ProductGetRequest = {
     /**
      * Product identifier in ADAAS System
      */
-    orgASEID: string,
+    aseid: string,
 }
 
 export type A_PRODUCTS_SERVER_COMMANDS_TYPES__ProductGetResponse = A_SDK_TYPES__Required<

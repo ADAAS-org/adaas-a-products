@@ -19,13 +19,13 @@ class A_PRODUCTS_SERVER_COMMANDS__ProductSettingsAPI extends a_auth_1.A_AUTH_App
      *
      * This function is used to get product settings
      *
-     * @param orgASEID
+     * @param aseid
      * @returns
      */
     load(request, config) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this
-                .get(`/products/${request.orgASEID}/settings`, {}, config);
+                .get(`/products/${request.aseid}/settings`, {}, config);
         });
     }
     /**
@@ -38,7 +38,7 @@ class A_PRODUCTS_SERVER_COMMANDS__ProductSettingsAPI extends a_auth_1.A_AUTH_App
     update(request, config) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this
-                .put(`/products/${request.orgASEID}/settings`, request.settings, config);
+                .put(`/products/${request.aseid}/settings`, request.settings, config);
         });
     }
 }

@@ -20,7 +20,7 @@ export class A_PRODUCTS_SERVER_DELEGATE__ProductProfileAPI extends A_AUTH_Server
      * 
      * This function is used to get product profile
      * 
-     * @param orgASEID 
+     * @param aseid 
      * @returns 
      */
     async load<M = any>(
@@ -29,7 +29,7 @@ export class A_PRODUCTS_SERVER_DELEGATE__ProductProfileAPI extends A_AUTH_Server
     ) {
         return await this
             .get<A_PRODUCTS_SERVER_DELEGATE_TYPES__ProductProfileGetResponse, M>(
-                `/products/${request.orgASEID}/profile`,
+                `/products/${request.aseid}/profile`,
                 {},
                 config
             );
@@ -51,7 +51,7 @@ export class A_PRODUCTS_SERVER_DELEGATE__ProductProfileAPI extends A_AUTH_Server
 
         return await this
             .post<A_PRODUCTS_SERVER_DELEGATE_TYPES__ProductProfileLogoUploadResponse, M>(
-                `/products/${request.orgASEID}/profile/logo`,
+                `/products/${request.aseid}/profile/logo`,
                 formData,
                 {
                     ...config,
@@ -76,7 +76,7 @@ export class A_PRODUCTS_SERVER_DELEGATE__ProductProfileAPI extends A_AUTH_Server
     ) {
         return await this
             .put<A_PRODUCTS_SERVER_DELEGATE_TYPES__ProductProfileUpdateResponse, M>(
-                `/products/${request.orgASEID}/profile`,
+                `/products/${request.aseid}/profile`,
                 request.profile,
                 config
             );

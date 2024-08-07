@@ -19,13 +19,13 @@ class A_PRODUCTS_SERVER_DELEGATE__AppProfileAPI extends a_auth_1.A_AUTH_ServerDe
      *
      * This function is used to get app profile
      *
-     * @param orgASEID
+     * @param aseid
      * @returns
      */
     load(request, config) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this
-                .get(`/apps/${request.orgASEID}/profile`, {}, config);
+                .get(`/apps/${request.aseid}/profile`, {}, config);
         });
     }
     /**
@@ -40,7 +40,7 @@ class A_PRODUCTS_SERVER_DELEGATE__AppProfileAPI extends a_auth_1.A_AUTH_ServerDe
             const formData = new FormData();
             formData.append('appLogo', request.file);
             return yield this
-                .post(`/apps/${request.orgASEID}/profile/logo`, formData, Object.assign(Object.assign({}, config), { headers: {
+                .post(`/apps/${request.aseid}/profile/logo`, formData, Object.assign(Object.assign({}, config), { headers: {
                     'Content-Type': 'multipart/form-data'
                 } }));
         });
@@ -55,7 +55,7 @@ class A_PRODUCTS_SERVER_DELEGATE__AppProfileAPI extends a_auth_1.A_AUTH_ServerDe
     update(request, config) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this
-                .put(`/apps/${request.orgASEID}/profile`, request.profile, config);
+                .put(`/apps/${request.aseid}/profile`, request.profile, config);
         });
     }
 }

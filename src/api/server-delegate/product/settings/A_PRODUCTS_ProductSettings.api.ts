@@ -19,7 +19,7 @@ export class A_PRODUCTS_SERVER_DELEGATE__ProductSettingsAPI extends A_AUTH_Serve
      * 
      * This function is used to get product settings
      * 
-     * @param orgASEID 
+     * @param aseid 
      * @returns 
      */
     async load<M = any>(
@@ -28,7 +28,7 @@ export class A_PRODUCTS_SERVER_DELEGATE__ProductSettingsAPI extends A_AUTH_Serve
     ) {
         return await this
             .get<A_PRODUCTS_SERVER_DELEGATE_TYPES__ProductSettingsGetResponse, M>(
-                `/products/${request.orgASEID}/settings`,
+                `/products/${request.aseid}/settings`,
                 {},
                 config
             );
@@ -48,7 +48,7 @@ export class A_PRODUCTS_SERVER_DELEGATE__ProductSettingsAPI extends A_AUTH_Serve
     ) {
         return await this
             .put<A_PRODUCTS_SERVER_DELEGATE_TYPES__ProductSettingsUpdateResponse, M>(
-                `/products/${request.orgASEID}/settings`,
+                `/products/${request.aseid}/settings`,
                 request.settings,
                 config
             );

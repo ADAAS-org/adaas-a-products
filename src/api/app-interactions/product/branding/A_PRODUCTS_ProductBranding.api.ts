@@ -28,7 +28,7 @@ export class A_PRODUCTS_APP_INTERACTIONS__ProductBrandingAPI extends A_AUTH_AppI
     ) {
         return await this
             .get<A_PRODUCTS_APP_INTERACTIONS_TYPES__ProductBrandingGetResponse, M>(
-                `/products/${request.productASEID}/branding`,
+                `/products/${request.aseid}/branding`,
                 {},
                 {
                     meta
@@ -53,7 +53,7 @@ export class A_PRODUCTS_APP_INTERACTIONS__ProductBrandingAPI extends A_AUTH_AppI
     ) {
         return await this
             .put<A_PRODUCTS_APP_INTERACTIONS_TYPES__ProductBrandingUpdateResponse, M>(
-                `/products/${request.orgASEID}/branding`,
+                `/products/${request.aseid}/branding`,
                 request.branding,
                 {
                     meta

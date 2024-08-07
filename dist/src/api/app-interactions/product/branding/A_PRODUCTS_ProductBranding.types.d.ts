@@ -15,14 +15,14 @@ export type A_PRODUCTS_APP_INTERACTIONS_TYPES__ProductBrandingGetRequest = {
     /**
      * Product identifier in ADAAS System
      */
-    productASEID: string;
+    aseid: string;
 };
 export type A_PRODUCTS_APP_INTERACTIONS_TYPES__ProductBrandingGetResponse = Partial<A_PRODUCTS_TYPES__ProductBranding_APIEntity>;
 export type A_PRODUCTS_APP_INTERACTIONS_TYPES__ProductBrandingUpdateRequest = {
     /**
      * Product identifier in ADAAS System
      */
-    orgASEID: string;
+    aseid: string;
     branding: A_SDK_TYPES__DeepPartial<A_PRODUCTS_TYPES__ProductBranding_APIEntity>;
 };
 export type A_PRODUCTS_APP_INTERACTIONS_TYPES__ProductBrandingUpdateResponse = Partial<A_PRODUCTS_TYPES__ProductBranding_APIEntity>;

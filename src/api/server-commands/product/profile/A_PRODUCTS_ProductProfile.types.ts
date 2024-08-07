@@ -9,7 +9,7 @@ export type A_PRODUCTS_SERVER_COMMANDS_TYPES__ProductProfileGetRequest = {
     /**
      * Product identifier in ADAAS System
      */
-    orgASEID: string,
+    aseid: string,
 }
 
 export type A_PRODUCTS_SERVER_COMMANDS_TYPES__ProductProfileGetResponse = Partial<A_PRODUCTS_TYPES__ProductProfile_APIEntity>
@@ -21,7 +21,7 @@ export type A_PRODUCTS_SERVER_COMMANDS_TYPES__ProductProfileUpdateRequest = {
     /**
      * Product identifier in ADAAS System
      */
-    orgASEID: string,
+    aseid: string,
     profile: A_SDK_TYPES__DeepPartial<A_PRODUCTS_TYPES__ProductProfile_APIEntity>
 }
 
@@ -35,7 +35,7 @@ export type A_PRODUCTS_SERVER_COMMANDS_TYPES__ProductProfileLogoUploadRequest = 
     /**
      * Product identifier in ADAAS System
      */
-    orgASEID: string,
+    aseid: string,
     file: File
 }
 

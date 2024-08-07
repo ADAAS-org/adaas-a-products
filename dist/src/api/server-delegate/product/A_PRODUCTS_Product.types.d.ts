@@ -10,7 +10,7 @@ export type A_PRODUCTS_SERVER_DELEGATE_TYPES__ProductGetRequest = {
     /**
      * Product identifier in ADAAS System
      */
-    orgASEID: string;
+    aseid: string;
 };
 export type A_PRODUCTS_SERVER_DELEGATE_TYPES__ProductGetResponse = A_SDK_TYPES__Required<A_SDK_TYPES__DeepPartial<A_PRODUCTS_TYPES__Product_APIEntity>, [
     'aseid',

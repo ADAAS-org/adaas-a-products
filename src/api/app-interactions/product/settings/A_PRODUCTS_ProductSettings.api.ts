@@ -30,7 +30,7 @@ export class A_PRODUCTS_APP_INTERACTIONS__ProductSettingsAPI extends A_AUTH_AppI
     ) {
         return await this
             .get<A_PRODUCTS_APP_INTERACTIONS_TYPES__ProductSettingsGetResponse, M>(
-                `/products/${request.orgASEID}/settings`,
+                `/products/${request.aseid}/settings`,
                 {},
                 {
                     meta
@@ -55,7 +55,7 @@ export class A_PRODUCTS_APP_INTERACTIONS__ProductSettingsAPI extends A_AUTH_AppI
     ) {
         return await this
             .put<A_PRODUCTS_APP_INTERACTIONS_TYPES__ProductSettingsUpdateResponse, M>(
-                `/products/${request.orgASEID}/settings`,
+                `/products/${request.aseid}/settings`,
                 request.settings,
                 {
                     meta
