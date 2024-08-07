@@ -32,12 +32,15 @@ export class A_PRODUCTS_SERVER_DELEGATE__AppAPI extends A_AUTH_ServerDelegate_AP
      */
     async list<M = any>(
         request: A_PRODUCTS_SERVER_DELEGATE_TYPES__AppListRequest,
-         config: A_SDK_TYPES__Required<A_AUTH_TYPES__APIProviderRequestConfig<M, A_AUTH_ServerDelegateAuthenticator>, ['authenticator']>
+        config: A_SDK_TYPES__Required<A_AUTH_TYPES__APIProviderRequestConfig<M, A_AUTH_ServerDelegateAuthenticator>, ['authenticator']>
     ) {
         return await this
             .get<A_PRODUCTS_SERVER_DELEGATE_TYPES__AppListResponse, M>(
                 '/apps',
-                request,
+                {
+                    ...request.pagination,
+                    ...request.filter
+                },
                 config
             );
     }
@@ -51,7 +54,7 @@ export class A_PRODUCTS_SERVER_DELEGATE__AppAPI extends A_AUTH_ServerDelegate_AP
      */
     async load<M = any>(
         request: A_PRODUCTS_SERVER_DELEGATE_TYPES__AppGetRequest,
-         config: A_SDK_TYPES__Required<A_AUTH_TYPES__APIProviderRequestConfig<M, A_AUTH_ServerDelegateAuthenticator>, ['authenticator']>
+        config: A_SDK_TYPES__Required<A_AUTH_TYPES__APIProviderRequestConfig<M, A_AUTH_ServerDelegateAuthenticator>, ['authenticator']>
     ) {
         return await this
             .get<A_PRODUCTS_SERVER_DELEGATE_TYPES__AppGetResponse, M>(
@@ -71,7 +74,7 @@ export class A_PRODUCTS_SERVER_DELEGATE__AppAPI extends A_AUTH_ServerDelegate_AP
      */
     async create<M = any>(
         request: A_PRODUCTS_SERVER_DELEGATE_TYPES__AppCreateRequest,
-         config: A_SDK_TYPES__Required<A_AUTH_TYPES__APIProviderRequestConfig<M, A_AUTH_ServerDelegateAuthenticator>, ['authenticator']>
+        config: A_SDK_TYPES__Required<A_AUTH_TYPES__APIProviderRequestConfig<M, A_AUTH_ServerDelegateAuthenticator>, ['authenticator']>
     ) {
         return await this
             .post<A_PRODUCTS_SERVER_DELEGATE_TYPES__AppCreateResponse, M>(
@@ -90,7 +93,7 @@ export class A_PRODUCTS_SERVER_DELEGATE__AppAPI extends A_AUTH_ServerDelegate_AP
     */
     async update<M = any>(
         request: A_PRODUCTS_SERVER_DELEGATE_TYPES__AppUpdateRequest,
-         config: A_SDK_TYPES__Required<A_AUTH_TYPES__APIProviderRequestConfig<M, A_AUTH_ServerDelegateAuthenticator>, ['authenticator']>
+        config: A_SDK_TYPES__Required<A_AUTH_TYPES__APIProviderRequestConfig<M, A_AUTH_ServerDelegateAuthenticator>, ['authenticator']>
     ) {
         return await this
             .post<A_PRODUCTS_SERVER_DELEGATE_TYPES__AppUpdateResponse, M>(

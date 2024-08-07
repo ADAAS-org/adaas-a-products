@@ -39,7 +39,10 @@ export class A_PRODUCTS_APP_INTERACTIONS__AppAPI extends A_AUTH_AppInteractions_
         return await this
             .get<A_PRODUCTS_APP_INTERACTIONS_TYPES__AppListResponse, M>(
                 '/apps',
-                request,
+                {
+                    ...request.pagination,
+                    ...request.filter
+                },
                 {
                     meta
                 }

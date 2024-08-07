@@ -39,7 +39,10 @@ export class A_PRODUCTS_APP_INTERACTIONS__ProductAPI extends A_AUTH_AppInteracti
         return await this
             .get<A_PRODUCTS_APP_INTERACTIONS_TYPES__ProductListResponse, M>(
                 '/products',
-                request,
+                {
+                    ...request.pagination,
+                    ...request.filter
+                },
                 {
                     meta
                 }

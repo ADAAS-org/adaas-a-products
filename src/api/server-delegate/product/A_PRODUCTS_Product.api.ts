@@ -39,7 +39,10 @@ export class A_PRODUCTS_SERVER_DELEGATE__ProductAPI extends A_AUTH_ServerDelegat
         return await this
             .get<A_PRODUCTS_SERVER_DELEGATE_TYPES__ProductListResponse, M>(
                 '/products',
-                request,
+                {
+                    ...request.pagination,
+                    ...request.filter
+                },
                 config
             );
     }

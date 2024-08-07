@@ -38,7 +38,10 @@ export class A_PRODUCTS_SERVER_COMMANDS__ProductAPI extends A_AUTH_AppInteractio
         return await this
             .get<A_PRODUCTS_SERVER_COMMANDS_TYPES__ProductListResponse, M>(
                 '/products',
-                request,
+                {
+                    ...request.pagination,
+                    ...request.filter
+                },
                 config
             );
     }

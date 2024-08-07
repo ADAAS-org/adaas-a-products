@@ -28,7 +28,7 @@ class A_PRODUCTS_SERVER_DELEGATE__ProductAPI extends a_auth_1.A_AUTH_ServerDeleg
     list(request, config) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this
-                .get('/products', request, config);
+                .get('/products', Object.assign(Object.assign({}, request.pagination), request.filter), config);
         });
     }
     /**
