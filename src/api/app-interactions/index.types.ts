@@ -4,3 +4,7 @@ export * from './product/settings/A_PRODUCTS_ProductSettings.types';
 export * from './app/A_PRODUCTS_App.types';
 export * from './app/profile/A_PRODUCTS_AppProfile.types';
 export * from './app/settings/A_PRODUCTS_AppSettings.types';
+export * from './app/widget/A_PRODUCTS_AppWidget.types';
+export * from './app/page/A_PRODUCTS_AppPage.types';
+export * from './page/A_PRODUCTS_Page.types';
+export * from './page/settings/A_PRODUCTS_PageSettings.types';

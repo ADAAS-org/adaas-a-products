@@ -20,4 +20,8 @@ __exportStar(require("./product/settings/A_PRODUCTS_ProductSettings.types"), exp
 __exportStar(require("./app/A_PRODUCTS_App.types"), exports);
 __exportStar(require("./app/profile/A_PRODUCTS_AppProfile.types"), exports);
 __exportStar(require("./app/settings/A_PRODUCTS_AppSettings.types"), exports);
+__exportStar(require("./app/widget/A_PRODUCTS_AppWidget.types"), exports);
+__exportStar(require("./app/page/A_PRODUCTS_AppPage.types"), exports);
+__exportStar(require("./page/A_PRODUCTS_Page.types"), exports);
+__exportStar(require("./page/settings/A_PRODUCTS_PageSettings.types"), exports);
 //# sourceMappingURL=index.types.js.map
