@@ -2,10 +2,15 @@ import { A_SDK_TYPES__IDefaultPagination, A_SDK_TYPES__IRequestFilter, A_SDK_TYP
 import { A_PRODUCTS_TYPES__PageSettings_APIEntity } from "./settings/A_PRODUCTS_PageSettings.types";
 import { A_SDK_TYPES__DeepPartial, A_SDK_TYPES__ExtractProperties, A_SDK_TYPES__Required } from "@adaas/a-sdk-types/dist/src/types/common.types";
 import { A_PRODUCTS_TYPES__App_APIEntity } from "../index.types";
+export type A_PRODUCTS_TYPES__PageParameter = {
+    name: string;
+    type: 'string' | 'number' | 'boolean';
+    required: boolean;
+};
 export type A_PRODUCTS_TYPES__PageParameters = {
-    pathParams: Array<any>;
-    queryParams: Array<any>;
-    communicationParams: Array<any>;
+    pathParams: Array<A_PRODUCTS_TYPES__PageParameter>;
+    queryParams: Array<A_PRODUCTS_TYPES__PageParameter>;
+    communicationParams: Array<A_PRODUCTS_TYPES__PageParameter>;
 };
 export type A_PRODUCTS_TYPES__Page_APIEntity = {
     id: string;
