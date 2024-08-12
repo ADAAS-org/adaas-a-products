@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ProductProfile = exports.ProductSettings = exports.Product = exports.AppProfile = exports.AppSettings = exports.App = void 0;
+exports.Page = exports.Widget = exports.WidgetSettings = exports.PageSettings = exports.ProductProfile = exports.ProductSettings = exports.Product = exports.AppPage = exports.AppWidget = exports.AppProfile = exports.AppSettings = exports.App = void 0;
 const A_PRODUCTS_Context_class_1 = require("../../global/A_PRODUCTS_Context.class");
 const A_PRODUCTS_Product_api_1 = require("./product/A_PRODUCTS_Product.api");
 const A_PRODUCTS_ProductSettings_api_1 = require("./product/settings/A_PRODUCTS_ProductSettings.api");
@@ -8,10 +8,22 @@ const A_PRODUCTS_ProductProfile_api_1 = require("./product/profile/A_PRODUCTS_Pr
 const A_PRODUCTS_AppProfile_api_1 = require("./app/profile/A_PRODUCTS_AppProfile.api");
 const A_PRODUCTS_AppSettings_api_1 = require("./app/settings/A_PRODUCTS_AppSettings.api");
 const A_PRODUCTS_App_api_1 = require("./app/A_PRODUCTS_App.api");
+const A_PRODUCTS_PageSettings_api_1 = require("./page/settings/A_PRODUCTS_PageSettings.api");
+const A_PRODUCTS_WidgetSettings_api_1 = require("./widget/settings/A_PRODUCTS_WidgetSettings.api");
+const A_PRODUCTS_Widget_api_1 = require("./widget/A_PRODUCTS_Widget.api");
+const A_PRODUCTS_Page_api_1 = require("./page/A_PRODUCTS_Page.api");
+const A_PRODUCTS_AppWidget_api_1 = require("./app/widget/A_PRODUCTS_AppWidget.api");
+const A_PRODUCTS_AppPage_api_1 = require("./app/page/A_PRODUCTS_AppPage.api");
 exports.App = new A_PRODUCTS_App_api_1.A_PRODUCTS_APP_INTERACTIONS__AppAPI(A_PRODUCTS_Context_class_1.A_PRODUCTS_Context);
 exports.AppSettings = new A_PRODUCTS_AppSettings_api_1.A_PRODUCTS_APP_INTERACTIONS__AppSettingsAPI(A_PRODUCTS_Context_class_1.A_PRODUCTS_Context);
 exports.AppProfile = new A_PRODUCTS_AppProfile_api_1.A_PRODUCTS_APP_INTERACTIONS__AppProfileAPI(A_PRODUCTS_Context_class_1.A_PRODUCTS_Context);
+exports.AppWidget = new A_PRODUCTS_AppWidget_api_1.A_PRODUCTS_APP_INTERACTIONS__AppWidgetAPI(A_PRODUCTS_Context_class_1.A_PRODUCTS_Context);
+exports.AppPage = new A_PRODUCTS_AppPage_api_1.A_PRODUCTS_APP_INTERACTIONS__AppPageAPI(A_PRODUCTS_Context_class_1.A_PRODUCTS_Context);
 exports.Product = new A_PRODUCTS_Product_api_1.A_PRODUCTS_APP_INTERACTIONS__ProductAPI(A_PRODUCTS_Context_class_1.A_PRODUCTS_Context);
 exports.ProductSettings = new A_PRODUCTS_ProductSettings_api_1.A_PRODUCTS_APP_INTERACTIONS__ProductSettingsAPI(A_PRODUCTS_Context_class_1.A_PRODUCTS_Context);
 exports.ProductProfile = new A_PRODUCTS_ProductProfile_api_1.A_PRODUCTS_APP_INTERACTIONS__ProductProfileAPI(A_PRODUCTS_Context_class_1.A_PRODUCTS_Context);
+exports.PageSettings = new A_PRODUCTS_PageSettings_api_1.A_PRODUCTS_APP_INTERACTIONS__PageSettingsAPI(A_PRODUCTS_Context_class_1.A_PRODUCTS_Context);
+exports.WidgetSettings = new A_PRODUCTS_WidgetSettings_api_1.A_PRODUCTS_APP_INTERACTIONS__WidgetSettingsAPI(A_PRODUCTS_Context_class_1.A_PRODUCTS_Context);
+exports.Widget = new A_PRODUCTS_Widget_api_1.A_PRODUCTS_APP_INTERACTIONS__WidgetAPI(A_PRODUCTS_Context_class_1.A_PRODUCTS_Context);
+exports.Page = new A_PRODUCTS_Page_api_1.A_PRODUCTS_APP_INTERACTIONS__PageAPI(A_PRODUCTS_Context_class_1.A_PRODUCTS_Context);
 //# sourceMappingURL=index.js.map
