@@ -18,9 +18,9 @@ export type A_PRODUCTS_TYPES__PageParameter = {
 }
 
 export type A_PRODUCTS_TYPES__PageParameters = {
-    pathParams: Array<A_PRODUCTS_TYPES__PageParameter>,
-    queryParams: Array<A_PRODUCTS_TYPES__PageParameter>,
-    communicationParams: Array<A_PRODUCTS_TYPES__PageParameter>,
+    path: Array<A_PRODUCTS_TYPES__PageParameter>,
+    query: Array<A_PRODUCTS_TYPES__PageParameter>,
+    communication: Array<A_PRODUCTS_TYPES__PageParameter>,
 }
 
 export type A_PRODUCTS_TYPES__CustomPage_APIEntity = {
