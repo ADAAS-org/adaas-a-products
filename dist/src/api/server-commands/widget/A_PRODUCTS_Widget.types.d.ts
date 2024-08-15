@@ -65,7 +65,7 @@ export type A_PRODUCTS_SERVER_COMMANDS_TYPES__WidgetDeleteResponse = {
     status: 'OK' | 'ERROR';
 };
 export type A_PRODUCTS_SERVER_COMMANDS_TYPES__WidgetMigrateRequest = {
-    pages: Array<A_PRODUCTS_SERVER_COMMANDS_TYPES__WidgetCreateRequest>;
+    widgets: Array<A_PRODUCTS_SERVER_COMMANDS_TYPES__WidgetCreateRequest>;
 };
 export type A_PRODUCTS_SERVER_COMMANDS_TYPES__WidgetMigrateResponse = {
     status: 'OK' | 'ERROR';
