@@ -10,7 +10,7 @@ import {
     A_SDK_TYPES__Required
 } from "@adaas/a-sdk-types/dist/src/types/common.types";
 import { A_PRODUCTS_TYPES__App_APIEntity } from "../index.types";
-import { A_PRODUCTS_TYPES__Page_APIEntity } from "../page/A_PRODUCTS_Page.types";
+import { A_PRODUCTS_TYPES__Page_APIEntity, A_PRODUCTS_TYPES__PageParameters } from "../page/A_PRODUCTS_Page.types";
 
 export type A_PRODUCTS_TYPES__CustomWidget_APIEntity = {
     id: number;
@@ -18,6 +18,7 @@ export type A_PRODUCTS_TYPES__CustomWidget_APIEntity = {
     source: string;
     integrity_hash: string;
 
+    parameters: A_PRODUCTS_TYPES__PageParameters;
 
     created_at: string;
     updated_at: string;
@@ -41,7 +42,7 @@ export type A_PRODUCTS_TYPES__EntityWidget_APIEntity = {
 
 export type A_PRODUCTS_TYPES__PageWidget_APIEntity = {
     id: number;
-    page_aseid: string;
+    page_id: string;
 
     //=========== FOREIGN KEYS=================
     Widget: A_PRODUCTS_TYPES__Widget_APIEntity;

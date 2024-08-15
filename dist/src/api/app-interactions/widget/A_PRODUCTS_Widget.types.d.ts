@@ -2,11 +2,12 @@ import { A_SDK_TYPES__IDefaultPagination, A_SDK_TYPES__IRequestFilter, A_SDK_TYP
 import { A_PRODUCTS_TYPES__WidgetSettings_APIEntity } from "./settings/A_PRODUCTS_WidgetSettings.types";
 import { A_SDK_TYPES__DeepPartial, A_SDK_TYPES__ExtractProperties, A_SDK_TYPES__Required } from "@adaas/a-sdk-types/dist/src/types/common.types";
 import { A_PRODUCTS_TYPES__App_APIEntity } from "../index.types";
-import { A_PRODUCTS_TYPES__Page_APIEntity } from "../page/A_PRODUCTS_Page.types";
+import { A_PRODUCTS_TYPES__Page_APIEntity, A_PRODUCTS_TYPES__PageParameters } from "../page/A_PRODUCTS_Page.types";
 export type A_PRODUCTS_TYPES__CustomWidget_APIEntity = {
     id: number;
     source: string;
     integrity_hash: string;
+    parameters: A_PRODUCTS_TYPES__PageParameters;
     created_at: string;
     updated_at: string;
 };
@@ -22,7 +23,7 @@ export type A_PRODUCTS_TYPES__EntityWidget_APIEntity = {
 };
 export type A_PRODUCTS_TYPES__PageWidget_APIEntity = {
     id: number;
-    page_aseid: string;
+    page_id: string;
     Widget: A_PRODUCTS_TYPES__Widget_APIEntity;
     created_at: string;
     updated_at: string;
