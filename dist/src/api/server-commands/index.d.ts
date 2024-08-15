@@ -4,9 +4,13 @@ import { A_PRODUCTS_SERVER_COMMANDS__ProductProfileAPI } from "./product/profile
 import { A_PRODUCTS_SERVER_COMMANDS__AppProfileAPI } from "./app/profile/A_PRODUCTS_AppProfile.api";
 import { A_PRODUCTS_SERVER_COMMANDS__AppSettingsAPI } from "./app/settings/A_PRODUCTS_AppSettings.api";
 import { A_PRODUCTS_SERVER_COMMANDS__AppAPI } from "./app/A_PRODUCTS_App.api";
+import { A_PRODUCTS_SERVER_COMMANDS__WidgetAPI } from "./widget/A_PRODUCTS_Widget.api";
+import { A_PRODUCTS_SERVER_COMMANDS__PageAPI } from "./page/A_PRODUCTS_Page.api";
 export declare const App: A_PRODUCTS_SERVER_COMMANDS__AppAPI;
 export declare const AppSettings: A_PRODUCTS_SERVER_COMMANDS__AppSettingsAPI;
 export declare const AppProfile: A_PRODUCTS_SERVER_COMMANDS__AppProfileAPI;
 export declare const Product: A_PRODUCTS_SERVER_COMMANDS__ProductAPI;
 export declare const ProductSettings: A_PRODUCTS_SERVER_COMMANDS__ProductSettingsAPI;
 export declare const ProductProfile: A_PRODUCTS_SERVER_COMMANDS__ProductProfileAPI;
+export declare const Widget: A_PRODUCTS_SERVER_COMMANDS__WidgetAPI;
+export declare const Page: A_PRODUCTS_SERVER_COMMANDS__PageAPI;

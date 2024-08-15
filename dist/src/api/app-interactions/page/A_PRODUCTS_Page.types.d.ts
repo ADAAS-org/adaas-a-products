@@ -4,7 +4,7 @@ import { A_SDK_TYPES__DeepPartial, A_SDK_TYPES__ExtractProperties, A_SDK_TYPES__
 import { A_PRODUCTS_TYPES__App_APIEntity } from "../index.types";
 export type A_PRODUCTS_TYPES__PageParameter = {
     name: string;
-    type: 'string' | 'number' | 'boolean';
+    type: 'string' | 'number' | 'boolean' | 'object' | 'array';
     required: boolean;
 };
 export type A_PRODUCTS_TYPES__PageParameters = {
@@ -12,10 +12,24 @@ export type A_PRODUCTS_TYPES__PageParameters = {
     queryParams: Array<A_PRODUCTS_TYPES__PageParameter>;
     communicationParams: Array<A_PRODUCTS_TYPES__PageParameter>;
 };
+export type A_PRODUCTS_TYPES__CustomPage_APIEntity = {
+    id: string;
+    source: string;
+    integrity_hash: string;
+    page_id: string;
+    created_at: string;
+    updated_at: string;
+};
+export type A_PRODUCTS_TYPES__FramePage_APIEntity = {
+    id: string;
+    url: string;
+    page_id: string;
+    created_at: string;
+    updated_at: string;
+};
 export type A_PRODUCTS_TYPES__Page_APIEntity = {
     id: string;
     aseid: string;
-    source: string;
     path: string;
     title: string;
     parameters: A_PRODUCTS_TYPES__PageParameters;
@@ -23,6 +37,8 @@ export type A_PRODUCTS_TYPES__Page_APIEntity = {
     owner_aseid: string;
     Settings: A_PRODUCTS_TYPES__PageSettings_APIEntity;
     App: A_PRODUCTS_TYPES__App_APIEntity;
+    CustomPage: A_PRODUCTS_TYPES__CustomPage_APIEntity;
+    FramePage: A_PRODUCTS_TYPES__FramePage_APIEntity;
     created_at: string;
     updated_at: string;
 };
@@ -40,27 +56,34 @@ export type A_PRODUCTS_APP_INTERACTIONS_TYPES__PageGetRequest = {
 export type A_PRODUCTS_APP_INTERACTIONS_TYPES__PageGetResponse = A_SDK_TYPES__Required<A_SDK_TYPES__DeepPartial<A_PRODUCTS_TYPES__Page_APIEntity>, [
     'id',
     'aseid',
-    'source',
     'path',
     'title',
     'app_aseid',
     'owner_aseid',
-    'Settings',
     'App',
     'created_at',
     'updated_at'
 ]> & {
+    Settings: A_SDK_TYPES__DeepPartial<A_PRODUCTS_TYPES__PageSettings_APIEntity>;
     parameters: A_SDK_TYPES__DeepPartial<A_PRODUCTS_TYPES__PageParameters>;
-};
+} & ({
+    CustomPage: A_SDK_TYPES__DeepPartial<A_PRODUCTS_TYPES__CustomPage_APIEntity>;
+} | {
+    FramePage: A_SDK_TYPES__DeepPartial<A_PRODUCTS_TYPES__FramePage_APIEntity>;
+});
 export type A_PRODUCTS_APP_INTERACTIONS_TYPES__PageCreateRequest = A_SDK_TYPES__ExtractProperties<A_PRODUCTS_TYPES__Page_APIEntity, [
-    'source',
+    'id',
     'path',
     'title',
     'parameters',
     'App'
 ]> & {
     Settings: A_SDK_TYPES__DeepPartial<A_PRODUCTS_TYPES__PageSettings_APIEntity>;
-};
+} & ({
+    CustomPage: A_SDK_TYPES__DeepPartial<A_PRODUCTS_TYPES__CustomPage_APIEntity>;
+} | {
+    FramePage: A_SDK_TYPES__DeepPartial<A_PRODUCTS_TYPES__FramePage_APIEntity>;
+});
 export type A_PRODUCTS_APP_INTERACTIONS_TYPES__PageCreateResponse = A_SDK_TYPES__Required<A_SDK_TYPES__DeepPartial<A_PRODUCTS_TYPES__Page_APIEntity>, [
     'id',
     'aseid',

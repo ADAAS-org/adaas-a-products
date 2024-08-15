@@ -7,6 +7,11 @@ export type A_PRODUCTS_TYPES__PageSettings_APIEntity = {
 
     display: boolean;
 
+    /**
+     * Could be a link to image or A-Folder path or mdi icon name with "mdi-" prefix
+     */
+    icon_identity: string;
+
     Page: A_PRODUCTS_TYPES__Page_APIEntity;
 
     created_at: string;

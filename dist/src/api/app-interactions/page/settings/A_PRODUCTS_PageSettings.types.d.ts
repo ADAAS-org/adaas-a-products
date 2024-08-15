@@ -3,6 +3,10 @@ import { A_PRODUCTS_TYPES__Page_APIEntity } from "../A_PRODUCTS_Page.types";
 export type A_PRODUCTS_TYPES__PageSettings_APIEntity = {
     id: number;
     display: boolean;
+    /**
+     * Could be a link to image or A-Folder path or mdi icon name with "mdi-" prefix
+     */
+    icon_identity: string;
     Page: A_PRODUCTS_TYPES__Page_APIEntity;
     created_at: string;
     updated_at: string;

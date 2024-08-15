@@ -5,6 +5,10 @@ import { A_PRODUCTS_TYPES__App_APIEntity } from "../index.types";
 import { A_PRODUCTS_TYPES__Page_APIEntity } from "../page/A_PRODUCTS_Page.types";
 export type A_PRODUCTS_TYPES__CustomWidget_APIEntity = {
     id: number;
+    source: string;
+    integrity_hash: string;
+    created_at: string;
+    updated_at: string;
 };
 export type A_PRODUCTS_TYPES__EntityWidget_APIEntity = {
     id: number;
@@ -13,6 +17,8 @@ export type A_PRODUCTS_TYPES__EntityWidget_APIEntity = {
     Widget: A_PRODUCTS_TYPES__Widget_APIEntity;
     Create: A_PRODUCTS_TYPES__Page_APIEntity;
     List: A_PRODUCTS_TYPES__Page_APIEntity;
+    created_at: string;
+    updated_at: string;
 };
 export type A_PRODUCTS_TYPES__PageWidget_APIEntity = {
     id: number;
@@ -71,11 +77,12 @@ export type A_PRODUCTS_APP_INTERACTIONS_TYPES__WidgetGetResponse = A_SDK_TYPES__
     PageWidget: A_SDK_TYPES__DeepPartial<A_PRODUCTS_TYPES__PageWidget_APIEntity>;
 });
 export type A_PRODUCTS_APP_INTERACTIONS_TYPES__WidgetCreateRequest = A_SDK_TYPES__ExtractProperties<A_PRODUCTS_TYPES__Widget_APIEntity, [
+    'id',
     'overline',
     'headline',
     'action',
     'content',
-    'app_aseid'
+    'App'
 ]> & {
     Settings: A_SDK_TYPES__DeepPartial<A_PRODUCTS_TYPES__WidgetSettings_APIEntity>;
 } & ({
