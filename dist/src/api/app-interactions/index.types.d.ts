@@ -8,3 +8,5 @@ export * from './app/widget/A_PRODUCTS_AppWidget.types';
 export * from './app/page/A_PRODUCTS_AppPage.types';
 export * from './page/A_PRODUCTS_Page.types';
 export * from './page/settings/A_PRODUCTS_PageSettings.types';
+export * from './widget/A_PRODUCTS_Widget.types';
+export * from './widget/settings/A_PRODUCTS_WidgetSettings.types';

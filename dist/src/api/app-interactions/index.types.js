@@ -24,4 +24,6 @@ __exportStar(require("./app/widget/A_PRODUCTS_AppWidget.types"), exports);
 __exportStar(require("./app/page/A_PRODUCTS_AppPage.types"), exports);
 __exportStar(require("./page/A_PRODUCTS_Page.types"), exports);
 __exportStar(require("./page/settings/A_PRODUCTS_PageSettings.types"), exports);
+__exportStar(require("./widget/A_PRODUCTS_Widget.types"), exports);
+__exportStar(require("./widget/settings/A_PRODUCTS_WidgetSettings.types"), exports);
 //# sourceMappingURL=index.types.js.map

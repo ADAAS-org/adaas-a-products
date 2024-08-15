@@ -10,7 +10,7 @@ export declare class A_PRODUCTS_SERVER_COMMANDS__WidgetSettingsAPI extends A_AUT
      * @param orgASEID
      * @returns
      */
-    load<M = any>(request: A_PRODUCTS_SERVER_COMMANDS_TYPES__WidgetSettingsGetRequest, config?: A_AUTH_TYPES__APIProviderRequestConfig<M>): Promise<Partial<import("../../../app-interactions/widget/settings/A_PRODUCTS_WidgetSettings.types").A_PRODUCTS_TYPES__WidgetSettings_APIEntity>>;
+    load<M = any>(request: A_PRODUCTS_SERVER_COMMANDS_TYPES__WidgetSettingsGetRequest, config?: A_AUTH_TYPES__APIProviderRequestConfig<M>): Promise<Partial<import("../../../app-interactions/index.types").A_PRODUCTS_TYPES__WidgetSettings_APIEntity>>;
     /**
      *  This function is used to update widget settings
      *
@@ -18,5 +18,5 @@ export declare class A_PRODUCTS_SERVER_COMMANDS__WidgetSettingsAPI extends A_AUT
      * @param meta
      * @returns
      */
-    update<M = any>(request: A_PRODUCTS_SERVER_COMMANDS_TYPES__WidgetSettingsUpdateRequest, config?: A_AUTH_TYPES__APIProviderRequestConfig<M>): Promise<Partial<import("../../../app-interactions/widget/settings/A_PRODUCTS_WidgetSettings.types").A_PRODUCTS_TYPES__WidgetSettings_APIEntity>>;
+    update<M = any>(request: A_PRODUCTS_SERVER_COMMANDS_TYPES__WidgetSettingsUpdateRequest, config?: A_AUTH_TYPES__APIProviderRequestConfig<M>): Promise<Partial<import("../../../app-interactions/index.types").A_PRODUCTS_TYPES__WidgetSettings_APIEntity>>;
 }
