@@ -1,10 +1,10 @@
-
 export {
     A_PRODUCTS_Context,
+} from './src/definitions/A_PRODUCTS_Context.def'
+// ============ Export Global & Service Entities ============
+export {
     A_PRODUCTS_ContextClass
 } from './src/global/A_PRODUCTS_Context.class';
-
-// ============ Export Global & Service Entities ============
 
 // ================== API ==================
 export * as A_PRODUCTS_AppInteractions from './src/api/app-interactions';

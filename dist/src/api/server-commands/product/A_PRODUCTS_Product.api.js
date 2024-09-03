@@ -14,7 +14,7 @@ const a_auth_1 = require("@adaas/a-auth");
 /**
  * API Provider for Products
  */
-class A_PRODUCTS_SERVER_COMMANDS__ProductAPI extends a_auth_1.A_AUTH_AppInteractions_APIProvider {
+class A_PRODUCTS_SERVER_COMMANDS__ProductAPI extends a_auth_1.A_AUTH_ServerCommands_APIProvider {
     get baseURL() {
         return this.context.getConfigurationProperty('API_LOCATION');
     }

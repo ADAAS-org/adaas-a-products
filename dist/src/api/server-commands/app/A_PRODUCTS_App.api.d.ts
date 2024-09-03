@@ -1,10 +1,10 @@
-import { A_AUTH_AppInteractions_APIProvider, A_AUTH_TYPES__APIProviderRequestConfig } from "@adaas/a-auth";
+import { A_AUTH_ServerCommands_APIProvider, A_AUTH_TYPES__APIProviderRequestConfig } from "@adaas/a-auth";
 import { A_PRODUCTS_ContextClass } from "../../../global/A_PRODUCTS_Context.class";
 import { A_PRODUCTS_SERVER_COMMANDS_TYPES__AppCreateRequest, A_PRODUCTS_SERVER_COMMANDS_TYPES__AppCreateResponse, A_PRODUCTS_SERVER_COMMANDS_TYPES__AppGetRequest, A_PRODUCTS_SERVER_COMMANDS_TYPES__AppGetResponse, A_PRODUCTS_SERVER_COMMANDS_TYPES__AppListRequest, A_PRODUCTS_SERVER_COMMANDS_TYPES__AppListResponse, A_PRODUCTS_SERVER_COMMANDS_TYPES__AppUpdateRequest, A_PRODUCTS_SERVER_COMMANDS_TYPES__AppUpdateResponse } from "./A_PRODUCTS_App.types";
 /**
  * API Provider for Apps
  */
-export declare class A_PRODUCTS_SERVER_COMMANDS__AppAPI extends A_AUTH_AppInteractions_APIProvider<A_PRODUCTS_ContextClass> {
+export declare class A_PRODUCTS_SERVER_COMMANDS__AppAPI extends A_AUTH_ServerCommands_APIProvider<A_PRODUCTS_ContextClass> {
     protected get baseURL(): string;
     /**
      * Returns list of apps based on User Access

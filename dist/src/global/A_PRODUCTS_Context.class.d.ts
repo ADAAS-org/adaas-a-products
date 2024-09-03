@@ -12,6 +12,7 @@ export declare class A_PRODUCTS_ContextClass extends A_AUTH_ContextClass {
     protected API_LOCATION: string;
     protected productsContextAllowedProperties: readonly ["CONFIG_SDK_VALIDATION", "CONFIG_VERBOSE", "CONFIG_IGNORE_ERRORS", "SSO_LOCATION", "ENABLE_AUTH", "API_LOCATION"];
     constructor();
+    protected awaitNestedDependencies(): Promise<void>;
     getConfigurationProperty<T = any>(property: typeof this.productsContextAllowedProperties[number]): T;
     /**
      *  Configure the A_PRODUCTS_Context with provided configurations
@@ -23,4 +24,3 @@ export declare class A_PRODUCTS_ContextClass extends A_AUTH_ContextClass {
     protected loadExtendedConfigurationsFromEnvironment(): Promise<void>;
     protected loadExtendedConfigurationsFromFile<T = any>(config: T): Promise<void>;
 }
-export declare const A_PRODUCTS_Context: A_PRODUCTS_ContextClass;

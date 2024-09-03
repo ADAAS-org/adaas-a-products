@@ -31,6 +31,13 @@ export class A_PRODUCTS_ContextClass extends A_AUTH_ContextClass {
     }
 
 
+    protected async awaitNestedDependencies(): Promise<void> {
+        await this.global.ready;
+
+        await this.auth.ready;
+    }
+    
+
     getConfigurationProperty<T = any>(
         property: typeof this.productsContextAllowedProperties[number]
     ): T {
@@ -83,5 +90,3 @@ export class A_PRODUCTS_ContextClass extends A_AUTH_ContextClass {
     }
 }
 
-
-export const A_PRODUCTS_Context = new A_PRODUCTS_ContextClass()

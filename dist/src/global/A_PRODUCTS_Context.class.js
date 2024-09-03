@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.A_PRODUCTS_Context = exports.A_PRODUCTS_ContextClass = void 0;
+exports.A_PRODUCTS_ContextClass = void 0;
 const a_sdk_types_1 = require("@adaas/a-sdk-types");
 const errors_constants_1 = require("../constants/errors.constants");
 const a_auth_1 = require("@adaas/a-auth");
@@ -31,6 +31,12 @@ class A_PRODUCTS_ContextClass extends a_auth_1.A_AUTH_ContextClass {
             ...this.authContextAllowedProperties,
             "API_LOCATION"
         ];
+    }
+    awaitNestedDependencies() {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield this.global.ready;
+            yield this.auth.ready;
+        });
     }
     getConfigurationProperty(property) {
         if (this.productsContextAllowedProperties.includes(property))
@@ -76,5 +82,4 @@ class A_PRODUCTS_ContextClass extends a_auth_1.A_AUTH_ContextClass {
     }
 }
 exports.A_PRODUCTS_ContextClass = A_PRODUCTS_ContextClass;
-exports.A_PRODUCTS_Context = new A_PRODUCTS_ContextClass();
 //# sourceMappingURL=A_PRODUCTS_Context.class.js.map

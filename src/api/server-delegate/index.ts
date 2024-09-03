@@ -1,4 +1,4 @@
-import { A_PRODUCTS_Context } from "@adaas/a-sdk/global/A_PRODUCTS_Context.class";
+import { A_PRODUCTS_Context } from "@adaas/a-sdk/definitions/A_PRODUCTS_Context.def";
 import { A_PRODUCTS_SERVER_DELEGATE__ProductAPI } from "./product/A_PRODUCTS_Product.api";
 import { A_PRODUCTS_SERVER_DELEGATE__ProductSettingsAPI } from "./product/settings/A_PRODUCTS_ProductSettings.api";
 import { A_PRODUCTS_SERVER_DELEGATE__ProductProfileAPI } from "./product/profile/A_PRODUCTS_ProductProfile.api";

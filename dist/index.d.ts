@@ -1,4 +1,5 @@
-export { A_PRODUCTS_Context, A_PRODUCTS_ContextClass } from './src/global/A_PRODUCTS_Context.class';
+export { A_PRODUCTS_Context, } from './src/definitions/A_PRODUCTS_Context.def';
+export { A_PRODUCTS_ContextClass } from './src/global/A_PRODUCTS_Context.class';
 export * as A_PRODUCTS_AppInteractions from './src/api/app-interactions';
 export * as A_PRODUCTS_ServerCommands from './src/api/server-commands';
 export * as A_PRODUCTS_ServerDelegate from './src/api/server-delegate';

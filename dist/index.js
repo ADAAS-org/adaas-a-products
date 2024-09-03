@@ -27,10 +27,11 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.A_PRODUCTS_CONSTANTS__ERROR_CODES = exports.A_PRODUCTS_CONSTANTS__DEFAULT_ERRORS = exports.A_PRODUCTS_ServerDelegate = exports.A_PRODUCTS_ServerCommands = exports.A_PRODUCTS_AppInteractions = exports.A_PRODUCTS_ContextClass = exports.A_PRODUCTS_Context = void 0;
-var A_PRODUCTS_Context_class_1 = require("./src/global/A_PRODUCTS_Context.class");
-Object.defineProperty(exports, "A_PRODUCTS_Context", { enumerable: true, get: function () { return A_PRODUCTS_Context_class_1.A_PRODUCTS_Context; } });
-Object.defineProperty(exports, "A_PRODUCTS_ContextClass", { enumerable: true, get: function () { return A_PRODUCTS_Context_class_1.A_PRODUCTS_ContextClass; } });
+var A_PRODUCTS_Context_def_1 = require("./src/definitions/A_PRODUCTS_Context.def");
+Object.defineProperty(exports, "A_PRODUCTS_Context", { enumerable: true, get: function () { return A_PRODUCTS_Context_def_1.A_PRODUCTS_Context; } });
 // ============ Export Global & Service Entities ============
+var A_PRODUCTS_Context_class_1 = require("./src/global/A_PRODUCTS_Context.class");
+Object.defineProperty(exports, "A_PRODUCTS_ContextClass", { enumerable: true, get: function () { return A_PRODUCTS_Context_class_1.A_PRODUCTS_ContextClass; } });
 // ================== API ==================
 exports.A_PRODUCTS_AppInteractions = __importStar(require("./src/api/app-interactions"));
 exports.A_PRODUCTS_ServerCommands = __importStar(require("./src/api/server-commands"));

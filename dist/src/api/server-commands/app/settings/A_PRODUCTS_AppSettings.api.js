@@ -11,7 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.A_PRODUCTS_SERVER_COMMANDS__AppSettingsAPI = void 0;
 const a_auth_1 = require("@adaas/a-auth");
-class A_PRODUCTS_SERVER_COMMANDS__AppSettingsAPI extends a_auth_1.A_AUTH_AppInteractions_APIProvider {
+class A_PRODUCTS_SERVER_COMMANDS__AppSettingsAPI extends a_auth_1.A_AUTH_ServerCommands_APIProvider {
     get baseURL() {
         return this.context.getConfigurationProperty('API_LOCATION');
     }

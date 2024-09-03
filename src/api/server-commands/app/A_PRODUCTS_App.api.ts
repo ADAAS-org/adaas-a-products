@@ -1,4 +1,4 @@
-import { A_AUTH_AppInteractions_APIProvider, A_AUTH_TYPES__APIProviderRequestConfig } from "@adaas/a-auth";
+import { A_AUTH_AppInteractions_APIProvider, A_AUTH_ServerCommands_APIProvider, A_AUTH_TYPES__APIProviderRequestConfig } from "@adaas/a-auth";
 import { A_PRODUCTS_ContextClass } from "@adaas/a-sdk/global/A_PRODUCTS_Context.class";
 import {
     A_PRODUCTS_SERVER_COMMANDS_TYPES__AppCreateRequest,
@@ -15,7 +15,7 @@ import {
 /**
  * API Provider for Apps
  */
-export class A_PRODUCTS_SERVER_COMMANDS__AppAPI extends A_AUTH_AppInteractions_APIProvider<A_PRODUCTS_ContextClass> {
+export class A_PRODUCTS_SERVER_COMMANDS__AppAPI extends A_AUTH_ServerCommands_APIProvider<A_PRODUCTS_ContextClass> {
 
     protected get baseURL(): string {
         return this.context.getConfigurationProperty('API_LOCATION');
